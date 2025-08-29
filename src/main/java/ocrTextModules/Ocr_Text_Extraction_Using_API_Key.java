@@ -167,7 +167,13 @@ public class Ocr_Text_Extraction_Using_API_Key {
             prop.load(input);
         }
 
-        String inputFolderPath = prop.getProperty("pdfInput.folder");
+        String inputFolderPath = System.getenv("Pdf_Input_Folder");
+        
+        if(((inputFolderPath==null))||(inputFolderPath.isEmpty())){
+        
+        inputFolderPath = prop.getProperty("pdfInput.folder");
+        }
+        
         String outputFolder = prop.getProperty("excelOutput.folder"); // just to create folder if needed
         if (outputFolder != null) new File(outputFolder).mkdirs();
 
