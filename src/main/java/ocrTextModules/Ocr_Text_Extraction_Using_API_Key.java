@@ -208,7 +208,7 @@ public class Ocr_Text_Extraction_Using_API_Key {
         if (outputFolder != null) new File(outputFolder).mkdirs();
 
         System.out.println("inputFolderPath: "+inputFolderPath);
-        
+        testCaseName.log(Status.INFO, "inputFolderPath: "+inputFolderPath);
         File inputFolder = new File(inputFolderPath);
 
         Set<String> processedFiles = new HashSet<>();
@@ -241,6 +241,8 @@ public class Ocr_Text_Extraction_Using_API_Key {
 
             System.out.println("Processing file: " + pdfFile.getName());
 
+            System.out.println("outputFolderPath: "+outputFolder);
+            testCaseName.log(Status.INFO, "outputFolderPath: "+outputFolder);
             extractPdfTextFromPdf(pdfFile, testCaseName);
 
             processedFiles.add(pdfFile.getName());
