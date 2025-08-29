@@ -115,7 +115,7 @@ public void afterTest() {
       }
 	 
   // Read properties
-     String reportPath = System.getenv("Report_Path");
+     String reportPath = System.getenv("Report_Path").replace("\\", "/");
    		  
      	if((reportPath == null)||reportPath.isEmpty()) {
    		  
@@ -154,7 +154,7 @@ public void beforeSuite() throws InterruptedException, FileNotFoundException {
 		  
   	if((reportPath == null)||reportPath.isEmpty()) {
 		  
-  		reportPath =	  prop.getProperty("report.path").replace("\\", "/"); // Convert to valid URI format
+  		reportPath =prop.getProperty("report.path").replace("\\", "/"); // Convert to valid URI format
   	}
   
   String theme = prop.getProperty("report.theme");
@@ -186,44 +186,14 @@ public void beforeSuite() throws InterruptedException, FileNotFoundException {
 
 
 @AfterSuite
-public void afterSuite(ITestContext context) throws IOException, URISyntaxException {
+public void afterSuite() throws IOException, URISyntaxException {
  
 	
-	
-  //  Properties prop = new Properties();
-
-
 
    // String reportPath = prop.getProperty("report.path").replace("\\", "/"); // Convert to valid URI format
 	
 	System.out.println("This will execute after the Test Suite");
 
-    // Log file path (replace with actual path)
-
-    boolean logContainsFailure = false;
-
-    // Check if the log contains "failed"
-  
-    // Fetch current test execution counts
-    int totalTests = context.getAllTestMethods().length;
-    int passedTests = context.getPassedTests().size();
-    int failedTests = context.getFailedTests().size();
-    int skippedTests = context.getSkippedTests().size();
-
-    // If failure is detected in logs, increase failure count
-    if (logContainsFailure) {
-        failedTests++; // Increase failures count
-        passedTests--; // Decrease passes count
-        System.out.println("❌ FAILURE DETECTED IN LOGS! Marking test as failed.");
-    }
-
-    // Display updated test summary
-    System.out.println("\n========== TEST EXECUTION SUMMARY ==========");
-    System.out.println("Total tests run: " + totalTests);
-    System.out.println("Passes: " + passedTests);
-    System.out.println("Failures: " + failedTests);
-    System.out.println("Skips: " + skippedTests);
-    System.out.println("=============================================\n");
-
+ 
 }
 }
