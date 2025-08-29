@@ -114,8 +114,14 @@ public void afterTest() {
           e.printStackTrace();
       }
 	 
-        String reportPath = prop.getProperty("report.path").replace("\\", "/"); // Convert to valid URI format
-		
+  // Read properties
+     String reportPath = System.getenv("Report_Path");
+   		  
+     	if((reportPath == null)||reportPath.isEmpty()) {
+   		  
+     		reportPath =	  prop.getProperty("report.path").replace("\\", "/"); // Convert to valid URI format
+     	}
+     	
 	
 
 	 try {
@@ -144,7 +150,13 @@ public void beforeSuite() throws InterruptedException, FileNotFoundException {
   }
 
   // Read properties
-  String reportPath = prop.getProperty("report.path").replace("\\", "/"); // Convert to valid URI format
+  String reportPath = System.getenv("Report_Path");
+		  
+  	if((reportPath == null)||reportPath.isEmpty()) {
+		  
+  		reportPath =	  prop.getProperty("report.path").replace("\\", "/"); // Convert to valid URI format
+  	}
+  
   String theme = prop.getProperty("report.theme");
   String documentTitle = prop.getProperty("report.documentTitle");
   String reportName = prop.getProperty("report.reportName");
