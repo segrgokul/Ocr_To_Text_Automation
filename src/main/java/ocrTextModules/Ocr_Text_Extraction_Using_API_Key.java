@@ -25,7 +25,19 @@ public class Ocr_Text_Extraction_Using_API_Key {
         }
         ExtentTest testCaseScenario = testCaseName.createNode("Reading pdfFile: " + pdfFile);
         String apiKey = prop.getProperty("ocr.api.key");
-        String outputFolder = prop.getProperty("excelOutput.folder");
+       
+        String outputFolder = System.getenv("Excel_Output_Folder");
+        
+        if(((outputFolder==null))||(outputFolder.isEmpty())){
+        
+            outputFolder = prop.getProperty("excelOutput.folder"); // just to create folder if needed
+            
+            
+        }
+        
+        
+        
+        
         if (outputFolder == null) {
             throw new IllegalArgumentException("excelOutput.folder is not defined in config.properties");
         }
@@ -174,7 +186,25 @@ public class Ocr_Text_Extraction_Using_API_Key {
         inputFolderPath = prop.getProperty("pdfInput.folder");
         }
         
-        String outputFolder = prop.getProperty("excelOutput.folder"); // just to create folder if needed
+      
+        String outputFolder = System.getenv("Excel_Output_Folder");
+        
+        if(((outputFolder==null))||(outputFolder.isEmpty())){
+        
+            outputFolder = prop.getProperty("excelOutput.folder"); // just to create folder if needed
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         if (outputFolder != null) new File(outputFolder).mkdirs();
 
         System.out.println("inputFolderPath: "+inputFolderPath);

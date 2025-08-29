@@ -26,7 +26,17 @@ public class Ocr_Text_CreateAndWriteExcelInFolder {
         try (FileInputStream input = new FileInputStream("src/main/resources/config.properties")) {
             prop.load(input);
         }
-        String outputFolder = prop.getProperty("excelOutput.folder");
+        
+        String outputFolder = System.getenv("Excel_Output_Folder");
+        
+        if(((outputFolder==null))||(outputFolder.isEmpty())){
+        
+            outputFolder = prop.getProperty("excelOutput.folder"); // just to create folder if needed
+            
+            
+        }
+        
+        
         if (outputFolder == null) {
             throw new IllegalArgumentException("excelOutput.folder is not defined in config.properties");
         }
