@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-29T10:58:28 IST" name="Default suite" finished-at="2025-08-29T10:59:52 IST" duration-ms="84521">
+    <groups>
+    </groups>
+    <test started-at="2025-08-29T10:58:28 IST" name="Default test" finished-at="2025-08-29T10:59:52 IST" duration-ms="84521">
+      <class name="ocrText_runner_Execution.OCR_Text_Execution">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:ocrText_runner_Execution.OCR_Text_Execution@7690781]" started-at="2025-08-29T10:58:27 IST" name="beforeSuite" finished-at="2025-08-29T10:58:28 IST" duration-ms="278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:ocrText_runner_Execution.OCR_Text_Execution@7690781]" started-at="2025-08-29T10:58:28 IST" name="beforeTest" finished-at="2025-08-29T10:58:28 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:ocrText_runner_Execution.OCR_Text_Execution@7690781]" started-at="2025-08-29T10:58:28 IST" name="beforeClass" finished-at="2025-08-29T10:58:28 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:ocrText_runner_Execution.OCR_Text_Execution@7690781]" started-at="2025-08-29T10:58:28 IST" name="beforeMethod" finished-at="2025-08-29T10:58:28 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="Ocr_Text_Extraction_With_Api()[pri:2, instance:ocrText_runner_Execution.OCR_Text_Execution@7690781]" started-at="2025-08-29T10:58:28 IST" name="Ocr_Text_Extraction_With_Api" finished-at="2025-08-29T10:59:51 IST" duration-ms="83517" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Ocr_Text_Extraction_With_Api -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ocrText_runner_Execution.OCR_Text_Execution@7690781]" started-at="2025-08-29T10:59:51 IST" name="afterMethod" finished-at="2025-08-29T10:59:52 IST" duration-ms="370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:ocrText_runner_Execution.OCR_Text_Execution@7690781]" started-at="2025-08-29T10:59:52 IST" name="afterClass" finished-at="2025-08-29T10:59:52 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:ocrText_runner_Execution.OCR_Text_Execution@7690781]" started-at="2025-08-29T10:59:52 IST" name="afterTest" finished-at="2025-08-29T10:59:52 IST" duration-ms="576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite(org.testng.ITestContext)[pri:0, instance:ocrText_runner_Execution.OCR_Text_Execution@7690781]" started-at="2025-08-29T10:59:52 IST" name="afterSuite" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1756445392701" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Native Injection is NOT supported for @AfterSuite annotated afterSuite.
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Native Injection is NOT supported for @AfterSuite annotated afterSuite.
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:442)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
+at org.testng.internal.Parameters.createParameters(Parameters.java:699)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:386)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- ocrText_runner_Execution.OCR_Text_Execution -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
