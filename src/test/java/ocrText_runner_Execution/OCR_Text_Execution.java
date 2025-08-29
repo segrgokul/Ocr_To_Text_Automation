@@ -67,14 +67,7 @@ public void beforeMethod() throws IOException, InterruptedException {
 @AfterMethod
 public void afterMethod() {
 	System.out.println("This will execute after every Method");
-	  Properties prop = new Properties();
-        try {
-            // Load the properties file
-      	  FileInputStream fileInputStream = new FileInputStream("src/main/resources/config.properties");
-            prop.load(fileInputStream);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+	
         // Flush Extent Report
         extentReport.flush();
 }
