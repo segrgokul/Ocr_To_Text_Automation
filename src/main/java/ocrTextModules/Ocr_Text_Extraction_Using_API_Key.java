@@ -177,6 +177,8 @@ public class Ocr_Text_Extraction_Using_API_Key {
         String outputFolder = prop.getProperty("excelOutput.folder"); // just to create folder if needed
         if (outputFolder != null) new File(outputFolder).mkdirs();
 
+        System.out.println("inputFolderPath: "+inputFolderPath);
+        
         File inputFolder = new File(inputFolderPath);
 
         Set<String> processedFiles = new HashSet<>();
