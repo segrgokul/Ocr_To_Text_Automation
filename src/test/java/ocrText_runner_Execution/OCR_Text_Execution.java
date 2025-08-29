@@ -115,17 +115,17 @@ public void afterTest() {
       }
 	 
   // Read properties
-     String reportPath = System.getenv("Report_Path").replace("\\", "/");
+     String reportPath = System.getenv("Report_Path");
    		  
      	if((reportPath == null)||reportPath.isEmpty()) {
    		  
-     		reportPath =	  prop.getProperty("report.path").replace("\\", "/"); // Convert to valid URI format
+     		reportPath =	  prop.getProperty("report.path"); // Convert to valid URI format
      	}
      	
 	
 
 	 try {
-            Desktop.getDesktop().browse(new URI("file:///" + reportPath));
+            Desktop.getDesktop().browse(new URI("file:///" + reportPath.replace("\\", "/")));
         } catch (Exception e) {
             e.printStackTrace();
         }	  // Ensure the browser is closed after the test
