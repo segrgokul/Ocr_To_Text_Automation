@@ -119,13 +119,13 @@ public void afterTest() {
    		  
      	if((reportPath == null)||reportPath.isEmpty()) {
    		  
-     		reportPath =	  prop.getProperty("report.path"); // Convert to valid URI format
+     		reportPath =	  prop.getProperty("report.path").replace("\\", "/"); // Convert to valid URI format
      	}
      	
 	
 
 	 try {
-            Desktop.getDesktop().browse(new URI("file:///" + reportPath.replace("\\", "/")));
+            Desktop.getDesktop().browse(new URI("file:///" + reportPath));
         } catch (Exception e) {
             e.printStackTrace();
         }	  // Ensure the browser is closed after the test
